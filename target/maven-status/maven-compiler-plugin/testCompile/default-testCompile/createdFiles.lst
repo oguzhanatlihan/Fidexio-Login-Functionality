@@ -1,0 +1,8 @@
+com\fidexio\utilities\Driver.class
+com\fidexio\pages\logout.class
+com\fidexio\step_definitions\Hooks.class
+com\fidexio\step_definitions\loginasPosMan_StepD.class
+com\fidexio\utilities\ConfigurationReader.class
+com\fidexio\step_definitions\logoutStepDefinitions.class
+com\fidexio\pages\loginPage.class
+com\fidexio\runners\Cukes_Runner.class

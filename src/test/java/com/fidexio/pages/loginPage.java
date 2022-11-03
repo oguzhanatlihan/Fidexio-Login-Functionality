@@ -33,7 +33,12 @@ public WebElement usernamebar;
     @FindBy(xpath = "//input[@type='password']")
     public WebElement bulletPassword;
 
+    public void login(String usernameStr, String passwordStr) {
+        usernamebar.sendKeys(usernameStr);
+        passwordBar.sendKeys(passwordStr);
+        loginButton.click();
+        // verification that we logged
 
-
+    }
 
 }

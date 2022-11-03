@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery.tablesorter.min.js"></script>
+<script src="js/Chart.min.js"></script>
+<script src="js/moment.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css"/>
+<link rel="stylesheet" href="css/cucumber.css" type="text/css"/>
+<link rel="stylesheet" href="css/font-awesome.min.css"/>
+<link rel="shortcut icon" href="images/favicon.png"/>
+
+<script>
+$(document).ready(function() {
+    // this will tell tablesorter to try looking for the data-value attribute
+    // if present, it'll sort by that instead
+    // otherwise, it'll sort by the text content of the table cell
+    $("#tablesorter").tablesorter({
+        textAttribute: 'data-value',
+        // ignores the first row of the header, the 'scenario', 'steps', since
+        // sorting those doesn't make sense
+        selectorHeaders: '> thead tr:not(.dont-sort) th',
+        // use a stable sort
+        sortStable: true
+    });
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+
+<title>Cucumber Reports  - Steps Overview</title>
+
+</head>
+<body>
+
+<nav class="navbar navbar-default navbar-fixed-top" id="navigation">
+  <div class="container-fluid">
+    <div class="collapse navbar-collapse">
+      <p class="navbar-text navbar-left">Cucumber Report</p>
+      <ul class="nav navbar-nav navbar-right">
+        <li role="presentation" ><a href="overview-features.html">Features</a></li>
+        <li role="presentation" ><a href="overview-tags.html">Tags</a></li>
+        <li role="presentation"     class="active" ><a href="overview-steps.html">Steps</a></li>
+        <li role="presentation" ><a href="overview-failures.html">Failures</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<div class="container-fluid">
+  <div class="col-md-5 col-md-offset-1">
+
+<table class="table table-bordered" id="build-info">
+  <thead>
+    <tr>
+      <th>Project</th>
+      <th>Date</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="info">
+      <td>No Name (add projectName to cucumber-reporting.properties)</td>
+      <td>03 Nov 2022, 02:53</td>
+    </tr>
+  </tbody>
+</table>
+
+  </div>
+  <div class="col-md-3 col-md-offset-2">
+  </div>
+</div>
+
+
+<div id="report-lead" class="container-fluid">
+  <div class="col-md-10 col-md-offset-1">
+    <h2>Steps Statistics</h2>
+      <p>The following graph shows step statistics for this build. Below list is based on results.
+ step does not provide information about result then is not listed below.
+ Additionally @Before and @After are not counted because they are part of the scenarios, not steps.</p>
+  </div>
+</div>
+
+<div class="container-fluid" id="report">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+      <table id="tablesorter" class="stats-table table-hover">
+
+        <thead>
+          <tr class="header">
+            <th>Implementation</th>
+            <th>Occurrences</th>
+            <th>Average duration</th>
+            <th>Max duration</th>
+            <th>Total durations</th>
+            <th>Ratio</th>
+          </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+              <td class="location">com.fidexio.step_definitions.login_StepD.user_clicks_login_button()</td>
+              <td>10</td>
+              <td class="duration" data-value="798931230">0.798</td>
+              <td class="duration" data-value="798931230">3.204</td>
+              <td class="duration" data-value="7989312300">7.989</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.fidexio.step_definitions.login_StepD.user_is_on_the_fidexio_login_page()</td>
+              <td>14</td>
+              <td class="duration" data-value="1144057350">1.144</td>
+              <td class="duration" data-value="1144057350">8.311</td>
+              <td class="duration" data-value="16016802900">16.016</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.fidexio.step_definitions.login_StepD.user_lands_on_the_home_page(java.lang.String)</td>
+              <td>4</td>
+              <td class="duration" data-value="498700">0.000</td>
+              <td class="duration" data-value="498700">0.001</td>
+              <td class="duration" data-value="1994800">0.001</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.fidexio.step_definitions.login_StepD.user_see_bullet_sign_by_default()</td>
+              <td>3</td>
+              <td class="duration" data-value="28664700">0.028</td>
+              <td class="duration" data-value="28664700">0.029</td>
+              <td class="duration" data-value="85994100">0.085</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.fidexio.step_definitions.login_StepD.user_see_enter_keyword_working_correctly_on_the_login_page()</td>
+              <td>1</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.fidexio.step_definitions.login_StepD.user_see_the_please_fille_out_this_field_message_after_password_or_username_is_empty()</td>
+              <td>4</td>
+              <td class="duration" data-value="38415450">0.038</td>
+              <td class="duration" data-value="38415450">0.053</td>
+              <td class="duration" data-value="153661800">0.153</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.fidexio.step_definitions.login_StepD.user_see_the_wrong_mail_or_password_message()</td>
+              <td>2</td>
+              <td class="duration" data-value="39868700">0.039</td>
+              <td class="duration" data-value="39868700">0.050</td>
+              <td class="duration" data-value="79737400">0.079</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.fidexio.step_definitions.login_StepD.user_types_invalid_password(java.lang.String)</td>
+              <td>2</td>
+              <td class="duration" data-value="83566850">0.083</td>
+              <td class="duration" data-value="83566850">0.093</td>
+              <td class="duration" data-value="167133700">0.167</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.fidexio.step_definitions.login_StepD.user_types_invalid_username(java.lang.String)</td>
+              <td>2</td>
+              <td class="duration" data-value="84639100">0.084</td>
+              <td class="duration" data-value="84639100">0.099</td>
+              <td class="duration" data-value="169278200">0.169</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.fidexio.step_definitions.login_StepD.user_types_just_password(java.lang.String)</td>
+              <td>4</td>
+              <td class="duration" data-value="92203475">0.092</td>
+              <td class="duration" data-value="92203475">0.133</td>
+              <td class="duration" data-value="368813900">0.368</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.fidexio.step_definitions.login_StepD.user_types_just_username(java.lang.String)</td>
+              <td>4</td>
+              <td class="duration" data-value="65097750">0.065</td>
+              <td class="duration" data-value="65097750">0.081</td>
+              <td class="duration" data-value="260391000">0.260</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.fidexio.step_definitions.login_StepD.user_types_password(java.lang.String)</td>
+              <td>4</td>
+              <td class="duration" data-value="95557625">0.095</td>
+              <td class="duration" data-value="95557625">0.117</td>
+              <td class="duration" data-value="382230500">0.382</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.fidexio.step_definitions.login_StepD.user_types_to_password_blank(java.lang.String)</td>
+              <td>3</td>
+              <td class="duration" data-value="81948900">0.081</td>
+              <td class="duration" data-value="81948900">0.087</td>
+              <td class="duration" data-value="245846700">0.245</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.fidexio.step_definitions.login_StepD.user_types_username(java.lang.String)</td>
+              <td>4</td>
+              <td class="duration" data-value="91632825">0.091</td>
+              <td class="duration" data-value="91632825">0.118</td>
+              <td class="duration" data-value="366531300">0.366</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.fidexio.step_definitions.login_StepD.user_types_valid(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="96970900">0.096</td>
+              <td class="duration" data-value="96970900">0.096</td>
+              <td class="duration" data-value="96970900">0.096</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.fidexio.step_definitions.login_StepD.user_types_valid_and_press_the_enter_key(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="743814600">0.743</td>
+              <td class="duration" data-value="743814600">0.743</td>
+              <td class="duration" data-value="743814600">0.743</td>
+              <td class="passed">100.00%</td>
+            </tr>
+        </tbody>
+
+        <tfoot class="total">
+          <tr>
+            <td>16</td>
+            <td>63</td>
+            <td class="duration">0.430</td>
+            <td class="duration">16.016</td>
+            <td class="duration">27.128</td>
+            <td>Totals</td>
+          </tr>
+        </tfoot>
+
+      </table>
+    </div>
+  </div>
+</div>
+
+
+<nav class="navbar navbar-default" id="footer">
+  <div class="container-fluid">
+    <p class="navbar-text navbar-right">
+        <small>generate Cucumber HTML reports via:&nbsp;</small>
+        <a class="navbar-link" href="https://github.com/jenkinsci/cucumber-reports-plugin">Jenkins Plugin</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-reporting">Standalone</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-sandwich">Sandwich</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/maven-cucumber-reporting">Maven</a>
+        &nbsp;&nbsp;
+    </p>
+  </div>
+</nav>
+
+</body>
+</html>

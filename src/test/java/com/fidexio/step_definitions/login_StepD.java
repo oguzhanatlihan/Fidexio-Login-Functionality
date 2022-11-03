@@ -8,10 +8,9 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
 import org.openqa.selenium.Keys;
-import org.openqa.selenium.WebElement;
 
 
-public class loginasPosMan_StepD {
+public class login_StepD {
     loginPage logPage = new loginPage();
     @Given("User is on the fidexio login page")
     public void user_is_on_the_fidexio_login_page() {
@@ -90,6 +89,7 @@ public class loginasPosMan_StepD {
         Assert.assertEquals("#Inbox - Odoo","#Inbox - Odoo");
 
     }
+
 
 }
 

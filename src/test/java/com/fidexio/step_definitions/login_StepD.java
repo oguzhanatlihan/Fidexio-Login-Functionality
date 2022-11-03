@@ -31,7 +31,7 @@ public class login_StepD {
     }
     @Then("User lands on the home page {string}")
     public void user_lands_on_the_home_page(String string) {
-        Assert.assertEquals("#Inbox - Odoo","#Inbox - Odoo");
+        Assert.assertEquals(Driver.getDriver().getTitle(),"#Inbox - Odoo");
     }
     @When("User types {string} invalid username")
     public void user_types_invalid_username(String string) {
@@ -86,7 +86,7 @@ public class login_StepD {
 
     @Then("User see Enter keyword working correctly on the login page")
     public void user_see_enter_keyword_working_correctly_on_the_login_page() {
-        Assert.assertEquals("#Inbox - Odoo","#Inbox - Odoo");
+        Assert.assertEquals(Driver.getDriver().getTitle(),"#Inbox - Odoo");
 
     }
 

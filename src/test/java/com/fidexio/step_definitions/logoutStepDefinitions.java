@@ -40,7 +40,7 @@ logout.logoutbutton.click();
     }
     @Then("user successfully logged out from the page")
     public void user_successfully_logged_out_from_the_page() {
-        Assert.assertEquals("Login | Best solution for startups","Login | Best solution for startups");
+        Assert.assertEquals(Driver.getDriver().getTitle(),"Login | Best solution for startups");
     }
 
     @When("user clicks salesmanager section right top of the page")
@@ -50,7 +50,7 @@ logout.userbutton.click();
 
     @Given("user logged out successfully as a {string}")
     public void user_logged_out_successfully_as_a(String userType) {
-      Assert.assertEquals("Login | Best solution for startups","Login | Best solution for startups");
+      Assert.assertEquals(Driver.getDriver().getTitle(),"Login | Best solution for startups");
     }
     @When("user clicks step back button")
     public void user_clicks_step_back_button() {

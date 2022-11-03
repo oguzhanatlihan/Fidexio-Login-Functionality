@@ -8,6 +8,7 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
+import org.openqa.selenium.WebDriver;
 
 public class logoutStepDefinitions {
     logout logout=new logout();
@@ -47,6 +48,17 @@ logout.logoutbutton.click();
 logout.userbutton.click();
     }
 
-
+    @Given("user logged out successfully as a {string}")
+    public void user_logged_out_successfully_as_a(String userType) {
+      Assert.assertEquals("Login | Best solution for startups","Login | Best solution for startups");
+    }
+    @When("user clicks step back button")
+    public void user_clicks_step_back_button() {
+        Driver.getDriver().navigate().back();
+    }
+    @Then("user see session expired text")
+    public void user_see_session_expired_text() {
+Assert.assertEquals(Driver.getDriver().getTitle(), "Odoo");
+    }
 
 }
